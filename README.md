@@ -26,6 +26,12 @@ Il permet aussi de rendre le code plus facilement lisible, et donc plus facileme
 
 ### Installer et lancer le Projet A - Backend
 
+#### Docker 🐳
+La manière la plus simple pour lancer le backend est d'installer [docker](https://docs.docker.com/get-docker/) et remplir le fichier example.env avec vos propres varible d'environement.
+une fois example.env rempli, il faut le renomme en .env.
+apres vous aurez bersoin de run la commande `sudo npm run setup` et puis lance la commande:
+`docker-compose up -d` pour lancer les conteneurs 
+
 #### API
 Avant de lancer l'api il faut que vous  installiez sur votre machine :
 - Server MySQL 
@@ -44,4 +50,5 @@ Au niveau du serveur à distance, on utilise [pm2](https://pm2.keymetrics.io/) q
 permettant de facilement les gérer ainsi que d'ajouter du load-balancing. 
 On y ajoute le plugin [pm2-logrotate](https://www.npmjs.com/package/pm2-logrotate) pour limiter la taille des fichiers de log.
 Pour utiliser pm2 : `pm2 start index.js`.
+
 
