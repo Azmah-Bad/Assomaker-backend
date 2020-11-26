@@ -27,6 +27,9 @@ jobs:
  
     - name: Setup Node.js environment
       uses: actions/setup-node@v2.1.2
+    
+    - name: wait for keycloak to boot up
+      run: sleep 20s 
 
     - name: setup environment 
       run:  |
