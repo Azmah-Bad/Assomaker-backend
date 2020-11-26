@@ -51,3 +51,4 @@ permettant de facilement les gérer ainsi que d'ajouter du load-balancing.
 On y ajoute le plugin [pm2-logrotate](https://www.npmjs.com/package/pm2-logrotate) pour limiter la taille des fichiers de log.
 Pour utiliser pm2 : `pm2 start index.js`.
 
+
