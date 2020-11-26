@@ -40,8 +40,9 @@ jobs:
         sudo npm run setup
         npm run create_admin
  
-    - name: tests
-      uses: anthonyvscode/newman-action@v1
+    - name: Newman Action
+      uses: matt-ball/newman-action@v0.2.0
       with:
-        collection: test/run CI.postman_collection.json
+        collection: test/CI.postman_collection.json
         globals: test/CI.postman_globals.json
+
