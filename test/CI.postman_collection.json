@@ -3553,31 +3553,6 @@
 					"response": []
 				},
 				{
-					"name": "user_requirement/:id",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{host}}/user_requirement/:id",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"user_requirement",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "2"
-								}
-							]
-						},
-						"description": "This requests deletes a user_requirement according to its id.\n# arguments :\n+ id : the id of the user_requirement\n\n# returns :\n+ a result being 1 if succeeded, 0 else"
-					},
-					"response": []
-				},
-				{
 					"name": "user_requirement/users/:id",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
