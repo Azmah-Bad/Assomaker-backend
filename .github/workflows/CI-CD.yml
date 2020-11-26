@@ -33,11 +33,15 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v2.1.2
 
-    - name: install dependancies
-      run:  npm install
-  
-    - name: populate the database
-      run:  npm run populate
+    - name: setup environment 
+      run:  |
+        npm ci
+        npm run populate
+        sudo npm run setup
+        npm run create_admin
  
     - name: tests
-      run: npm test
+      uses: anthonyvscode/newman-action@v1
+      with:
+        collection: test/run CI.postman_collection.json
+        globals: test/CI.postman_globals.json
